@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情绪日记</title>
+    <link rel="stylesheet" href="styles.css"> 
+
+</head>
+<body>
+
+    <h2>这里是你的情绪日记，让我们来记录一下今天的情绪吧！</h2>
+
+    <audio id="bgMusic" src="music1.mp3" loop></audio>
+    <div id="emotion-buttons">
+        <button class="emotion-btn" onclick="selectEmotion('喜悦')">喜悦</button>
+        <button class="emotion-btn" onclick="selectEmotion('愤怒')">愤怒</button>
+        <button class="emotion-btn" onclick="selectEmotion('恐惧')">恐惧</button>
+        <button class="emotion-btn" onclick="selectEmotion('悲伤')">悲伤</button>
+        <button class="emotion-btn" onclick="selectEmotion('焦虑')">焦虑</button>
+        <button class="emotion-btn" onclick="selectEmotion('厌恶')">厌恶</button>
+    </div>
+    <p>已选择的情绪: <span id="selected-emotion">无</span></p>
+
+    <h2>让我们来想一想，发生了什么让你有这样的情绪？把它写下来吧！</h2>
+    <textarea id="event"></textarea>
+
+    <h2>有这样的情绪之后，你做了什么呢？你现在会怎样评价自己的行为呢？思考一下，把想法记录下来吧！</h2>
+    <textarea id="reaction"></textarea>
+
+    <h2>今天采取了什么方式来调节情绪呢？你的感受怎么样？将这些写下来吧！</h2>
+    <textarea id="regulation"></textarea>
+
+    <button onclick="saveEntry()">保存日记</button>
+
+    <h2>今天的记录完成啦！想要看看自己之前的情绪日记的话，记得可以随时回来查看哦！</h2>
+
+    <h3>历史日记：</h3>
+    <div id="entry-list"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
